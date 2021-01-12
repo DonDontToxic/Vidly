@@ -1,0 +1,16 @@
+﻿@model Vidly.Models.Customer
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model == null)
+{
+    <h2>Can't found this customer</h2>
+    <br/>
+    @Html.ActionLink("Back home...", "Index", "Home")
+}
+else
+{
+    <h2>@Model.Name</h2>
+}

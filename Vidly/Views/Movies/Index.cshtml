@@ -1,0 +1,21 @@
+﻿@model Vidly.ViewModel.MoviesViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie</h2>
+
+@if (Model.Movies.Count == 0)
+{
+    <p>We dont have any movies yet !!!</p> 
+}
+else
+{
+    <h5>Movie</h5>
+    foreach (var movie in Model.Movies)
+    {
+        <p>@movie.ID. @movie.Name</p>
+    }
+}
